@@ -184,5 +184,23 @@ namespace BFL
         {
             trans.transform.Translate(Vector3.back * Time.deltaTime * speed, relativeTo);
         }
+        
+        /// <summary> 
+        /// Smoothly rotates the GameObject right.
+        /// <param name="speed">Speed of rotation.</param>
+        /// </summary>
+        public static void RotateRight(this GameObject trans, float speed = 1f, Space relativeTo = Space.World)
+        {
+            trans.transform.Rotate(Vector3.up * Time.deltaTime * speed, relativeTo);
+        }
+        
+        /// <summary> 
+        /// Smoothly rotates the GameObject left.
+        /// <param name="speed">Speed of rotation.</param>
+        /// </summary>
+        public static void RotateLeft(this GameObject trans, float speed = 1f, Space relativeTo = Space.World)
+        {
+            trans.transform.Rotate(Vector3.up * Time.deltaTime * -speed, relativeTo);
+        }
     }
 }
